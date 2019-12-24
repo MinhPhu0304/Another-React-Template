@@ -4,8 +4,6 @@ import { store } from 'store'
 import { changeGreetings } from 'store/actions'
 
 export function Home () {
-  console.log(store.getState())
-
   useEffect(() => {
     store.dispatch(changeGreetings('everyone'))
   })
