@@ -4,8 +4,8 @@ import { Provider } from 'react-redux'
 
 import { history } from 'store/history'
 
-import { Home } from './components/home'
-import { Portal } from './components/portal'
+import { Home } from 'components/pages/home'
+import { Portal } from 'components/pages/portal'
 
 import { store } from './store'
 

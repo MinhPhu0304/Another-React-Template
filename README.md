@@ -2,15 +2,40 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## What is different from  Create React App?
+- Added Redux store for state management
+- Added navigation to different pages
+- The boilerplate is configured that every navigation to another page will trigger an action to Redux store
+
+## Folder structure
+
+    ├── README.md
+    ├── node_modules
+    ├── package.json
+    ├── .gitignore
+    ├── jsconfig.json              # Setting JS complier otpions for vs code
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   └── manifest.json
+    └── src
+        ├── pages/                 # Page folder
+        ├── atoms/                 # Other small comopnents
+        ├── App.js
+        ├── store/                 # Redux logic
+        │   ├── actions/           # Action creators
+        │   ├── history/           # Navigation listener
+        │   ├── reducers/          # Reducer functions
+        │   └── index.js           # store export
+        ├── index.js
+        └── serviceWorker.js
+    
 ## Available Scripts
 
 ### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### `npm run build`
 
