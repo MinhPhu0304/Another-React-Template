@@ -2,10 +2,15 @@ import { NAVIGATE } from 'store/actions'
 
 export function page (state, { type, payload }) {
   switch (type) {
-    case NAVIGATE: 
+    case NAVIGATE:
+      const { pathname, search, hash } = payload.path
       return {
         ...state,
-        history: payload
+        history: {
+          pathname,
+          search,
+          hash,
+        }
       }
     default:
       return { ...state }
