@@ -2,10 +2,12 @@ import { combineReducers } from 'redux'
 
 import { CHANGE_GREETINGS } from '../actions'
 
-export const rootReducers = combineReducers({ greeting })
+import { page } from './page'
+
+export const rootReducers = combineReducers({ greeting, page })
 
 function greeting (state, action) {
-  switch(action.type) {
+  switch (action.type) {
     case CHANGE_GREETINGS:
       return {
         ...state,
@@ -13,6 +15,7 @@ function greeting (state, action) {
       }
     default: 
       return {
+        ...state,
         greeting: 'Hello from  Redux'
       }
   }
